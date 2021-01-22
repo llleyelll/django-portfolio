@@ -1,5 +1,192 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+    --earth: #EAE7DC;
+    --pink-salmon: #E85A4F;
+    --salmon: #E98074;
+    --gold: #D8c3A5;
+}
 
 * {
-    font-family: "Nunito", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--earth);
+}
+
+hr {
+    height: 1px;
+    border-width: 0;
+    background-color: var(--gold);
+}
+
+a {
+    color: var(--salmon);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: var(--pink-salmon);
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--pink-salmon);
+}
+
+section {
+    padding: 0 15%;
+    padding-top: 5%;
+}
+
+#mainProfile {
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+@media (max-width: 575px) {
+    #mainProfile {
+        max-width: 90%;
+    }
+}
+
+#me {
+    padding-top: 10%;
+}
+
+#me img{
+    padding-bottom: 1rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    flex: 60%;
+    padding-right: 3%;
+}
+
+.profile {
+    flex: 40%;
+    padding-right: 10%;
+}
+
+#fullname {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+}
+
+#myposition {
+    padding: 0 0 1rem 0;
+    color: var(--pink-salmon);
+    font-size: medium;
+    font-style: italic;
+    margin-top: 1%;
+}
+
+.skill {
+    text-align: center;
+}
+.skill-lst {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.subtitle {
+    color: var(--salmon);
+}
+
+.secTitle {
+    color: var(--pink-salmon);
+    text-transform: uppercase;
+}
+
+.secTitleline {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.date {
+    color: var(--salmon);
+    font-size: medium;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+/* Experience section */
+
+.ex-resize {
+    max-width: 60%;
+    max-height: auto;
+    padding-bottom: 10%;
+}
+
+.exp-lst {
+    padding-top: 5%;
+}
+
+.exp-item {
+    display: flex;
+    padding: 0 5%;
+}
+.exp-item h5{
+    color: var(--pink-salmon) ;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.exp-logo {
+    flex: 40%;
+}
+
+.exp-detail {
+    flex: 60%;
+    margin: 0 auto;
+}
+.exp-detail h2 {
+    margin-bottom: 1%;
+}
+.exp-detail li {
+    font-size: large;
+}
+
+/* Projects section */
+.proj-item {
+    padding: 0 5%;
+    padding-top: 2%;
+}
+
+.projimg {
+    max-width: 20%;
+    max-height: auto;
+}
+
+.proj-stack {
+    margin-top: 0;
+    color: var(--salmon);
 }

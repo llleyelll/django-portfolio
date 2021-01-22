@@ -1,5 +1,4 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,9 +6,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chananchida F.</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
 </head>
 <body>
-    <h1>Home</h1>
-    
+    <header>
+        <a class="navbar-brand" href="index.html">Chananchida F.</a>
+        <nav>
+            <ul class="navbar ml-auto">
+                <li><a class="nav-link" id="atme" href="#me">Me</a></li> 
+                <li><a class="nav-link" id="exp" href="#experiences">Experiences</a></li>
+                <l><a class="nav-link" id="proj" href="#projects">Projects</a></li>
+                <li><a class="nav-link" id="cont" href="#contact">Contact</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <section id="me">
+        <div class="info">
+            <div class="profile">
+                <img id="mainProfile" src="{% static 'image/profile.jpg' %}" alt="profile">
+            </div>
+            <div class="description">
+                <h1 id="fullname">Chananchida Fuachai</h1>
+                <h2 id="myposition">Software Engineer Student</h2>
+                <p>You can call me <b>Eye</b>. <br />I am a Software and Knowledge Engineering
+                    student at Kasetsart University. I was passion and interest in programming.
+                </p>
+            </div>
+        </div>
+        <div class="skill">
+            <h2 class="subtitle">SKILLS</h2>
+            <hr />
+            <div class="skill-lst">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Javascript</p>
+                <p>Typescript</p>
+                <p>Node.js</p>
+                <p>jQuery</p>
+                <p>React.js</p>
+                <p>Redux</p>
+                <p>Python</p>
+                <p>Django</p>
+                <p>Java</p>
+                <p>C</p>
+                <p>C#</p>
+                <p>Swift</p>
+                <p>Firebase</p>
+                <p>Git</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences">
+        <h1 class="secTitle">Experiences</h1>
+        <hr class="secTitleline" />
+
+        <div class="exp-lst">
+            <div class="exp-item">
+                <div class="exp-logo">
+                    <center><img class="ex-resize" src="{% static 'image/exp/Agoda-logo.jpg' %}" alt=""></center>
+                </div>
+                <div class="exp-detail">
+                    <h2>Internship at Agoda</h2>
+                    <h3 class="date">June – July, 2020</h3>
+                    <ul>
+                        <li>Software Engineer Intern</li>
+                        <li><a target="blank" rel="noopener" href="https://llleyelll.github.io/resource/docs/ACT - Intern__Ms. Chananchida Fuachai.pdf">Internship Certificate PDF</a></li>
+                        <li>Using React Native, Redux, Typescript, C#</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-logo">
+                    <center><img class="ex-resize" src="{% static 'image/exp/gdg.jpg' %}" alt=""></center>
+                </div>
+                <div class="exp-detail">
+                    <h2>Google Tech Challenge at Bangkok</h2>
+                    <h3 class="date">September, 2019</h3>
+                    <ul>
+                        <li>A competition for computer science and engineering community, giving students a
+                            glimpse into Google’s culture, logical thinking, collaboration, and on-the-spot
+                            coding.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-logo">
+                    <center><img class="ex-resize" src="{% static 'image/exp/KU_Logo_JPG.jpg' %}" alt=""></center>
+                </div>
+                <div class="exp-detail">
+                    <h2>Teaching Asistant at Kasetsart University</h2>
+                    <h3 class="date">August, 2019</h3>
+                    <ul>
+                        <li>Computer Programming I course</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="secTitle">Projects</h2>
+        <hr class="secTitleline" />
+
+        <div class="proj-item">
+            <h2>Bang Yai Used Car's Line official <span class="date">– August 2019</span></h2>
+            <p class="proj-stack">Using JavaScript and Firebase</p>
+            <p class="projdes">ChatBot for Bang Yai Used Car’s Line Official using Firebase for API. Also,
+                have a rich menu with some keywords for the customer to ask for some information. This is my
+                very first project on ChatBot.
+            </p>
+            <center><img class="projimg" src="{% static 'image/proj/byuc1.png' %}" alt=""></center>
+        </div>
+        <hr class="projline" />
+
+        <div class="proj-item">
+            <h2>WithU <span class="date">– July 2019</span></h2>
+            <p>Using HTML5, CSS3, JavaScript, Boostrap, and Python</p>
+            <p class="projdes">WithU is an IoT Based Heart Rate Monitoring. The ability to collect and
+                analyses heart rate or beats per minute (BPM) and vibration from sensor and display on the
+                website, in order to treat mental illness.</p>
+            <center><img class="projimg" src="{% static 'image/proj/WithU1.png' %}" alt=""></center>
+        </div>
+        <hr/>
+
+        <div class="proj-item">
+            <h2>I AM NOT POPCORN! <span class="date">– May 2019</span></h2>
+            <p>Using Python</p>
+            <p class="projdes">I AM NOT POPCORN! is a 2D platform games create with Python and
+                Arcade library. The goal of this game is to pass level as many as you can.
+                While avoid fire and collecting some items.</p>
+            <center><img class="projimg" src="{% static 'image/proj/popcorn2.png' %}" alt=""></center>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="secTitle">Contact me</h2>
+        <hr class="secTitleline" />
+    </section>
 </body>
 </html>
