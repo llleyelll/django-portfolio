@@ -8,7 +8,7 @@
     <title>Chananchida F.</title>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 <body>
     <header>
@@ -36,26 +36,26 @@
                 </p>
             </div>
         </div>
-        <div class="skill">
+        <div class="centered">
             <h2 class="subtitle">SKILLS</h2>
             <hr />
             <div class="skill-lst">
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-                <p>Typescript</p>
-                <p>Node.js</p>
-                <p>jQuery</p>
-                <p>React.js</p>
-                <p>Redux</p>
-                <p>Python</p>
-                <p>Django</p>
-                <p>Java</p>
-                <p>C</p>
-                <p>C#</p>
-                <p>Swift</p>
-                <p>Firebase</p>
-                <p>Git</p>
+                <p class="skill">HTML</p>
+                <p class="skill">CSS</p>
+                <p class="skill">Javascript</p>
+                <p class="skill">Typescript</p>
+                <p class="skill">Node.js</p>
+                <p class="skill">jQuery</p>
+                <p class="skill">React.js</p>
+                <p class="skill">Redux</p>
+                <p class="skill">Python</p>
+                <p class="skill">Django</p>
+                <p class="skill">Java</p>
+                <p class="skill">C</p>
+                <p class="skill">C#</p>
+                <p class="skill">Swift</p>
+                <p class="skill">Firebase</p>
+                <p class="skill">Git</p>
             </div>
         </div>
     </section>
@@ -115,39 +115,75 @@
         <hr class="secTitleline" />
 
         <div class="proj-item">
-            <h2>Bang Yai Used Car's Line official <span class="date">– August 2019</span></h2>
+            <h2 class="proj-title">Bang Yai Used Car's Line official <span class="date">– August 2019</span></h2>
             <p class="proj-stack">Using JavaScript and Firebase</p>
             <p class="projdes">ChatBot for Bang Yai Used Car’s Line Official using Firebase for API. Also,
                 have a rich menu with some keywords for the customer to ask for some information. This is my
                 very first project on ChatBot.
             </p>
-            <center><img class="projimg" src="{% static 'image/proj/byuc1.png' %}" alt=""></center>
+            <center><img class="projimg" style="max-width: 40%;" src="{% static 'image/proj/byuc1.png' %}" alt=""></center>
         </div>
         <hr class="projline" />
 
         <div class="proj-item">
-            <h2>WithU <span class="date">– July 2019</span></h2>
-            <p>Using HTML5, CSS3, JavaScript, Boostrap, and Python</p>
+            <h2 class="proj-title">WithU <span class="date">– July 2019</span></h2>
+            <p class="proj-stack">Using HTML5, CSS3, JavaScript, Boostrap, and Python</p>
             <p class="projdes">WithU is an IoT Based Heart Rate Monitoring. The ability to collect and
                 analyses heart rate or beats per minute (BPM) and vibration from sensor and display on the
                 website, in order to treat mental illness.</p>
-            <center><img class="projimg" src="{% static 'image/proj/WithU1.png' %}" alt=""></center>
+            <center><img class="projimg" style="max-width: 80%;" src="{% static 'image/proj/WithU1.png' %}" alt=""></center>
         </div>
-        <hr/>
+        <hr class="projline"/>
 
         <div class="proj-item">
-            <h2>I AM NOT POPCORN! <span class="date">– May 2019</span></h2>
-            <p>Using Python</p>
+            <h2 class="proj-title">I AM NOT POPCORN! <span class="date">– May 2019</span></h2>
+            <p class="proj-stack">Using Python</p>
             <p class="projdes">I AM NOT POPCORN! is a 2D platform games create with Python and
                 Arcade library. The goal of this game is to pass level as many as you can.
                 While avoid fire and collecting some items.</p>
-            <center><img class="projimg" src="{% static 'image/proj/popcorn2.png' %}" alt=""></center>
+            <center><img class="projimg" style="max-width: 50%;"  src="{% static 'image/proj/popcorn2.png' %}" alt=""></center>
         </div>
     </section>
 
     <section id="contact">
         <h2 class="secTitle">Contact me</h2>
         <hr class="secTitleline" />
+
+        <form class="contact-form" method="POST">
+            {% csrf_token %}
+            <label for="email">Email: </label>
+            <input id="email" type="email" name="email" placeholder="Enter email" />
+            <label for="subject">Subject: </label>
+            <input id="subject" type="text" name="subject" placeholder="Enter subject" />
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" rows="5" placeholder="Enter a message"></textarea>
+            <button id="submit-form" type="submit">Submit</button>
+        </form>
+
+        <div class="contact-form centered">
+            <a class="clink" href="http://github.com/llleyelll">
+                <img class="sologo" src="{% static 'image/logo/github.png' %}" alt="">
+            </a>
+            <a class="clink" href="mailto:chida.fua@gmail.com?subject=Mail from personal website">
+                <img class="sologo" src="{% static 'image/logo/gplus.png' %}" alt="">
+            </a>
+            <a class="clink" href="https://www.linkedin.com/in/chananchidaf">
+                <img class="sologo" src="{% static 'image/logo/linkedin.png' %}" alt="">
+            </a>
+        </div>
     </section>
+
+    
+    <hr />
+    <footer>
+        <p>Code with &hearts; by <a
+            href="http://github.com/llleyelll">Chananchida Fuachai</p>
+    </footer>
+
+    <script type="text/javascript">
+        $("#submit-form").click(function() {
+            alert("Thank you for your message!");
+        });
+    </script>
 </body>
 </html>

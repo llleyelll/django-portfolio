@@ -108,13 +108,25 @@ section {
     margin-top: 1%;
 }
 
-.skill {
+.centered {
     text-align: center;
 }
+
 .skill-lst {
-    display: inline-flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
 }
+
+/* .skill {
+    width: 60%;
+    height: 30px;
+    border-radius: 40px;
+    background-color: var(--gold);
+} */
 
 .subtitle {
     color: var(--salmon);
@@ -181,12 +193,53 @@ section {
     padding-top: 2%;
 }
 
+.proj-title {
+    margin-bottom: 1%;
+}
+
 .projimg {
-    max-width: 20%;
     max-height: auto;
+}
+
+.projline {
+    margin-top: 5%;
 }
 
 .proj-stack {
     margin-top: 0;
     color: var(--salmon);
+}
+
+/* Contact section */
+.sologo {
+    max-width: 60px;
+    height: auto;
+}
+
+.clink {
+    padding: 0 2%;
+}
+
+.contact-form {
+    padding: 2% 5%;
+}
+
+input[type=text], input[type=email], button, textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: var(--salmon);
+}
+
+footer {
+    padding: 1% 0;
+    text-align: center;
 }
