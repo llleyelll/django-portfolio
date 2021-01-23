@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='secrect')
 
-DEBUG = config('DEBUG', default='secrect')
+DEBUG = config('DEBUG', default='False')
 
 ALLOWED_HOSTS = ['llleyelll.pythonanywhere.com', '127.0.0.1']
 
