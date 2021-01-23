@@ -13,7 +13,7 @@ SECRET_KEY = config('SECRET_KEY', default='secrect')
 
 DEBUG = config('DEBUG', default='secrect')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['llleyelll.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
